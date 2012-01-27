@@ -4,4 +4,11 @@
 % make sure trace pops off the stack. It should be a noop
 true 1 trace assert
 
+% RubyVM::InstructionSequence.compile('1 + 2').disasm
+1 trace
+1 putobject
+2 putobject
+opt_plus
+3 assert-equal
+
 done
